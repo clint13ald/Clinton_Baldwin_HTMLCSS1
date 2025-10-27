@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Clinton Baldwin</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 id="site-title">Clinton Baldwin</h1>
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container contact-intro">
+      <h2>Get in touch</h2>
+      <p>If you'd like to reach me, feel free to send an email or connect on social media.</p>
+      <p>Email: <a href="mailto:clint13ald@gmail.com" class="mailto">clint13ald@gmail.com</a></p>
+      <p>Social:
+        <a href="https://steamcommunity.com/" target="_blank" rel="noopener" class="social-link">steam</a> |
+        <a href="https://github.com/clint13ald" target="_blank" rel="noopener" class="social-link">GitHub</a>
+
+      </p>
+
+
+
+
+    </section>
+
+    <section class="container contact-form">
+      <h3>Quick message</h3>
+      <form action="#" method="post" aria-label="Contact form">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" placeholder="Your name">
+
+        <label for="email">Your email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" placeholder="Write a short message..."></textarea>
+
+        <button class="btn" type="submit">Send</button>
+      </form>
+      <p>
+        My profile on steam, where we create scripts and software for games. Then test them.
+        <a href="https://steamcommunity.com/profiles/76561198144033620/" target="_blank" rel="noopener"
+          class="social-link">steam</a>
+
+      <p>>Here is some of the scripts that I've made for games.
+
+      </p>
+      <pre><code>
+
+        FOR TF2
+              // Clint's Good Connection
+rate 60000
+cl_updaterate 66
+cl_interp 0
+cl_lagcompensation 1 
+cl_cmdrate 66
+cl_smooth 0 
+cl_smoothtime 0.01 
+cl_pred_optimize 2 
+cl_interp_ratio 1
+
+fps_max 500
+viewmodel_fov 90
+fov_desired 90
+
+bind "MOUSE3" "load_itempreset 0"
+
+            // Clint's Weapon Switcher
+bind 1 "wep1"
+bind 2 "wep2"
+bind MOUSE5 "wep3"
+bind q "qswitch"
+bind MOUSE4 "downbind"
+alias wep1 "primary"
+alias wep2 "second"
+alias wep3 "melee"
+alias primary "slot1;alias wep2 switch3;alias wep3 switch5;alias downbind switch3;alias upbind switch5;cross1"
+alias second "slot2;alias wep1 switch1;alias wep3 switch6;alias downbind switch6;alias upbind switch1;cross2"
+alias melee "slot3;alias wep1 switch2;alias wep2 switch4;alias downbind switch2;alias upbind switch4;cross3"
+alias qswitch "switch3"
+alias switch1 "primary;alias qswitch switch3"
+alias switch2 "primary;alias qswitch switch5"
+alias switch3 "second;alias qswitch switch1"
+alias switch4 "second;alias qswitch switch6"
+alias switch5 "melee;alias qswitch switch2"
+alias switch6 "melee;alias qswitch switch4"
+
+// Shadows
+// Shadows can provide a tactical advantage, but at the same time can lower FPS, especially in busy areas.
+//r_shadowmaxrendered 0				// Set to 11 to enable.
+//r_shadowrendertotexture 0			// Set to 1 to enable, but can cause lag; 0 is the recommended setting either way.
+//r_shadows 0						    // Set to 1 to enable.
+//nb_shadow_dist 0				    // Distance from which shadows are visible. Uncomment to modify.
+
+// Disable ragdolls
+cl_ragdoll_fade_time 0
+cl_ragdoll_forcefade 1
+cl_ragdoll_physics_enable 0
+cl_ragdoll_collide 0
+g_ragdoll_fadespeed 0
+g_ragdoll_lvfadespeed 0
+ragdoll_sleepaftertime 0
+
+// Disable gibs
+cl_phys_props_enable 0
+cl_phys_props_max 0
+prop_active_gib_limit 0
+props_break_max_pieces 0
+props_break_max_pieces_perframe 0
+violence_agibs 0
+violence_hgibs 0
+cl_burninggibs 0                
+
+//cl_hud_playerclass_use_playermodel 0 // Potential FPS gain, we'll see after more thorough testing
+//mat_phong 0							// Disables phong shading on all models. Also achieved by enabling DX8. Disables lightwarps. Can make some models appear black.
+//cl_drawmonitors 0					// Disables the rendering of in-game "monitors" which render things in front of a camera somewhere else on the map (think Dr. Breen in HL2 train station). Mostly unused except maybe in some DR maps
+//cl_jiggle_bone_framerate_cutoff 0 	// Turns off jigglebones, although I recommend keeping them on at all times by setting them to 1, since their performance impact is generally none/negligible.
+//cl_new_impact_effects 0				// Disables new impact effects. Even if you have a high end computer, this will cause crashes as of ~Apr 2015.
+//cl_show_splashes 0					// Disables water splashes
+//func_break_max_pieces 0				// Undocumented, but probably the same as props_break_max_pieces
+//glow_outline_effect_enable 0 		// Cart glow effect. Performance loss with this is generally negligible, however, so I recommend enabling it simply because of how useful it is.
+//lod_transitiondist 0				// Sets how far you have to be from someone to make them go to their next LOD. Setting this to 0 forces the lowest LOD.
+//mat_antialias 0						// Sets lowest antialiasing value. Set to 0 from 1 as of 11/19/15 due to crashing issues//.
+//mat_bumpmap 0 						// Controls bumpmapping. Apparently it has a weird shine effect if used on dx9, but I'm not seeing it. Set to 1 if you experience it.
+//mat_colcorrection_disableentities 0 // Disables color-correcting entities.
+//mat_colorcorrection 0				// Disables color-correction.
+//mat_disable_fancy_blending 1		// Disables fancy texture blending.
+//mat_disable_lightwarp 1				// Disables lightwarps, which partially determine shading for players, entities, and the map. mat_phong also does this.
+//mat_disable_ps_patch 1              //
+//mat_filterlightmaps 1				// Filters lightmaps. Set to 0 for minecraft lighting. No performance impact.
+//mat_filtertextures 1				// Filters textures. Set to 0 for minecraft textures. No performance impact.
+//mat_forceaniso 1					// Forces anisotropic filtering level
+//mat_hdr_level 0						// Sets HDR level.
+//mat_max_worldmesh_vertices 65535	// Determines how many chunks world geometry is broken up into. Higher = less, 65535 is the theoretical maximum
+//mat_monitorgamma 1.8 				// Controls brightness, try 1.8 to make it brighter or 2.2 to get it darker. Only works in fullscreen.
+//mat_motion_blur_enabled 0			// Disables motion blur.
+//mat_mipmaptextures 1				// Controls mipmapping. Setting this to 0 should not improve performance, and will not affect vram usage like mat_picmip will.
+//mat_reducefillrate 1				// Reduces shader complexity.
+//mat_reduceparticles 1				// Reduces particle count.
+//mat_autoexposure_max 0              //
+//mat_autoexposure_min 0              //
+//mat_alphacoverage 0                 // Reduces shader complexity for some transparent materials.
+//mat_specular 1 						// Controls specularity. Setting this to 0 will make ubers non-shiny, and will remove some specular effects from in-game entities which support it.
+//mat_forcemanagedtextureintohardware 0
+
+//mat_trilinear 0 					// Sets trlinear mode.
+//mat_wateroverlaysize 1				// Water overlay size.
+//mp_decals 9 						// `9' is a good value to still see the spread pattern from a scattergun without any real performance loss. Needs to be changed with r_decals.
+//r_3dsky 0							// Disables 3D skies. This makes maps like koth_wubwubwub much, much less spectacular, so you need to compromise.
+//r_ambientboost 0					// Controls ambient lights
+//r_cheapwaterend 1					// Activates cheap water
+//r_cheapwaterstart 1					// Activates cheap water
+//r_decals 9							// Controls decal amount. Needs to be changed with mp_decals.
+//r_maxmodeldecal 9                   // Controls how many decals can be on a model at once
+//r_decalstaticprops 0				// Enables whether decals can be seen on props.
+//r_decal_cullsize 15					// Controls the cull size of decals.
+//r_drawdetailprops 0					// Controls whether detail props (grass, etc.) should be drawn.
+//r_drawmodeldecals 0					// Controls whether decals should be seeable on a model.
+//r_drawflecks 0						// Controls whether particles upon hitting a surface with a bullet should be rendered.
+//r_dynamic 0							// Disables dynamic lighting.
+//r_maxdlights 0						// Determines the maximum number of dynamic lights visible on the screen.
+//r_physpropstaticlighting 0			// Dtermines if there should be static lighting on props
+//r_occlusion	1						// Allows mappers to manually optimize their map. Theoretical FPS loss with it DISABLED, which is why it's enabled.
+//r_worldlights 1                     // Number of world lights to use per vertex. Set to 0 for a theoretical performance gain but very bad lighting effects on characters.
+//r_forcewaterleaf 1					// Optimization to water - considers view in leaf under water for purposes of culling.
+//r_lightaverage 0					// Disables average lighting.
+//r_dopixelvisibility 0               //
+//r_propsmaxdist 1					// Max visible distance for clientside physics props.
+//r_renderoverlayfragment 0			// Disables various mapmaker-placed signs and decals, like those underneath health and ammo packs.
+//r_staticprop_lod 10					// Sets the default LOD for static props. Undocumented, so I don't know the limit, but 10 is a good number.
+//r_waterdrawreflection 0				// Controls as to whether reflections should be drawn on the surface of water.
+//r_waterdrawrefraction 1				// Setting to 0 makes it so that water looks weird and you can't look into it, but it might have an FPS gain.
+//r_waterforceexpensive 0				// Forces expensive water.
+//r_waterforcereflectentities 0		// Forces as to whether entities should be reflected into water even if r_waterdrawreflection is 0.
+//rope_averagelight 0					// Makes ropes use average of cubemap lighting instead of max intensity.
+//rope_collide 0						// Collide rope with the world.
+//rope_rendersolid 1					// Changes rope visibility. Set to 1 since ropes will be used a lot more with Mannpower. Disable for a boost.
+//rope_shake 0						// Controls whether ropes should shake as if there's wind.
+//rope_smooth 0						// Controls as to whether there should be an antialiasing effect on ropes.
+//rope_subdiv 0						// Rope subdivision amount.
+//rope_wind_dist 0					// If a rope is this far away, don't simulate wind on them.
+//tf_particles_disable_weather 1 		// Disable weather effects on maps supporting it. For example, setting this to `1' disables rain effects on *_sawmill.
+//tracer_extra 0						// Enlarges tracers at long distance to make them more visible.
+//violence_ablood 1 					// Setting ablood/hblood to 1 actually improves perf usually
+//violence_hblood 1					//
+
+// Control antialiasing quality to a better extent
+//mat_software_aa_quality 0 // was 9
+//mat_software_aa_strength 0
+//mat_software_aa_strength_vgui -1
+//mat_software_aa_blur_one_pixel_lines 0
+//mat_software_aa_edge_threshold 9
+//mat_software_aa_tap_offset "1"
+
+//----------------------------------------------------------------------------
+// Miscellaneous
+// Some miscellaneous improvements that don't quite fit into any of the above categories.
+//----------------------------------------------------------------------------
+
+//flex_smooth 1
+//in_usekeyboardsampletime 0
+//mat_clipz 1 	 // FX card users should set this to 0
+//mat_forcehardwaresync 0
+//mat_levelflush 1
+//m_rawinput 1 	 // Turn on raw mouse input.
+//mat_vsync 0 	 // Turn off vsync to avoid nasty I/O latency.
+//r_fastzreject -1 // Values >1 enable a fast Z rejection algorithm, to be performed on the GPU (as opposed to on the CPU). The value `-1' autodetects hardware support for this feature, which is safer than forcing it.
+//mat_queue_mode 2 // mat_queue mode is another frequently asked about cvar, it
+                 // defines the threading method to be used by the material
+                 // system. It has been unstable to use in the past, but
+                 // nowadays it's generally okay.
+                 //
+                 // Here are the possible values:
+                 //     -2 legacy default
+                 //     -1 default
+                 //      0 synchronous single thread
+                 //      1 queued single thread
+                 //      2 queued multithreaded
+                 //
+                 // If you have problems with the value `2', try setting it to
+                 // `-1'.
+                 //
+                 // As an aside, there are quite a few bugs in the demo system
+                 // that occur when mat_queue_mode is set to a value that is
+                 // not `-1'. If you intend to do work with the demo system,
+                 // maybe you should change this.
+
+//cl_threaded_client_leaf_system 0
+//r_queued_ropes 1
+//r_threaded_client_shadow_manager 1
+//r_threaded_particles 1
+//sv_forcepreload 1								   // Forces preloading sounds and such to make it lag less when in-game.
+//mat_viewportupscale 1                            // for terrible GPU's only
+//mat_viewportscale 0.5                            // for terrible GPU's only
+//cl_software_cursor 0       						   // fixes Windows cursor appearing on screen bug, but breaks on Mac/Linux and prevents looking up in some cases when set to 1
+
+        // Clint's Experimental
+
+//----------------------------------------------------------------------------
+// Experimental
+// Disable these if you experience crashes
+//----------------------------------------------------------------------------
+
+//cl_ejectbrass 0			   	// Disables visual bullet ejection from miniguns. Causes crashes for some clients.
+//cl_localnetworkbackdoor 0          // Network optimizations for Singleplayer, disabling has about a 1-2% fps boost
+//cl_cloud_settings 0                // Disables cloud syncing of configs, should decrease FPS variance. Disable if you want to.
+//ai_expression_optimization 1       // Disables NPC expressions when you can't see them, not sure if it works on regular players in TF2, but that's why it's experimental.
+//r_pixelfog 0                     // Apparently changes fog clarity to give a more DX8-ish appearance when set to 1.
+//fast_fogvolume 1                   // Undocumented but I didn't experience any FPS loss with it enabled, will run benchmarks later.
+//filesystem_native 0                // I think there's an FPS gain with this, anyway.
+//host_thread_mode 0                 // Prevents buggy singleplayer, set to 1 for benefits
+								   // makes local servers unplayable, so disabled by default
+//mod_load_anims_async 1             // Loads model animations async
+//mod_load_mesh_async 1              // Load model mesh async
+//mod_load_vcollide_async 1          // Load model vcollide async
+//r_queued_post_processing 1
+//r_threaded_renderables 1
+
+// cl_loadondemand_default stays at 0 regardless as to whether you choose to use experimental features or not simply because it provides
+// a straight up benefit and isn't unstable.
+
+// Sound
+//dsp_enhance_stereo 0
+//dsp_slow_cpu 1
+//snd_async_fullyasync 1 // Having the sound run fully asynchronous has been
+                       // helpful in the past, as it seems to (for whatever
+                       // reason) reduce the number of TDRs experienced during
+                       // gameplay. There's some pretty good information on
+                       // TDRs (nerds only) here:
+                       // http://forums.nvidia.com/index.php?showtopic=65161
+//snd_pitchquality 0
+//snd_spatialize_roundrobin 1
+//snd_mixahead .05 // Delay in sound from weapons below .05 has been known to be unstable
+
+// Null-cancelling movement script
+bind w +mfwd
+bind s +mback
+bind a +mleft
+bind d +mright
+alias +mfwd "-back;+forward;alias checkfwd +forward"
+alias +mback "-forward;+back;alias checkback +back"
+alias +mleft "-moveright;+moveleft;alias checkleft +moveleft"
+alias +mright "-moveleft;+moveright;alias checkright +moveright"
+alias -mfwd "-forward;checkback;alias checkfwd none"
+alias -mback "-back;checkfwd;alias checkback none"
+alias -mleft "-moveleft;checkright;alias checkleft none"
+alias -mright "-moveright;checkleft;alias checkright none"
+alias checkfwd none
+alias checkback none
+alias checkleft none
+alias checkright none
+alias none ""
+
+//voice commands
+bind uparrow "voicemenu 0 3"
+bind leftarrow "voicemenu 0 4"
+bind rightarrow "voicemenu 0 5"
+bind downarrow "voicemenu 0 7"
+
+//net_graph 1
+bind "tab" +scores
+alias +scores "net_graph 1; +showscores"
+alias -scores "net_graph 0; -showscores"
+
+//Reload graphics and sound to fix glitches.
+bind "p" "hud_reloadscheme"
+
+      <pre><code>
+
+        FOR MARVEL RIVALS
+        Clint's Performance 
+
+      [Internationalization]                              
+      Culture=en
+
+      [ScalabilityGroups]
+      sg.ViewDistanceQuality=0                          
+      sg.ShadowQuality=0
+      sg.PostProcessQuality=0
+      sg.TextureQuality=0
+      sg.EffectsQuality=0
+      sg.FoliageQuality=0
+      sg.ReflectionQuality=0
+      sg.GlobalIlluminationQuality=0
+
+      [/Script/Engine.GameUserSettings]
+      bUseDesiredScreenHeight=False
+
+      [/Script/Marvel.MarvelGameUserSettings]
+      AntiAliasingSuperSamplingMode=4
+      SuperSamplingQuality=6
+      CASSharpness=0.000000
+      ScreenPercentage=100.000000
+      VoiceLanguage=
+      bNvidiaReflex=True
+      bXeLowLatency=False
+      bAMDAntiLag2=False
+      bDlssFrameGeneration=False
+      bFSRFrameGeneration=False
+      bXeFrameGeneration=False
+      DlssFrameGenerationCount=1
+      MonitorIndex=-1
+      bEnableConsole120Fps=False
+      bUseVSync=False
+      bUseDynamicResolution=True
+      ResolutionSizeX=1920
+      ResolutionSizeY=1080
+      LastUserConfirmedResolutionSizeX=1920
+      LastUserConfirmedResolutionSizeY=1080
+      WindowPosX=0
+      WindowPosY=0
+      FullscreenMode=1
+      LastConfirmedFullscreenMode=1
+      PreferredFullscreenMode=1
+      Version=22
+      AudioQualityLevel=0
+      LastConfirmedAudioQualityLevel=0
+      FrameRateLimit=240.000000
+      DesiredScreenWidth=1280
+      DesiredScreenHeight=720
+      LastUserConfirmedDesiredScreenWidth=1280
+      LastUserConfirmedDesiredScreenHeight=720
+      LastRecommendedScreenWidth=-1.000000
+      LastRecommendedScreenHeight=-1.000000
+      LastCPUBenchmarkResult=-1.000000
+      LastGPUBenchmarkResult=-1.000000
+      LastGPUBenchmarkMultiplier=1.000000
+      bUseHDRDisplayOutput=False
+      HDRDisplayOutputNits=1000
+      MonitorID="MONITOR\\BNQ7F58\\{4d36e96e-e325-11ce-bfc1-08002be10318}\\0003"
+      FrameRateLimitLobby=240.000000
+      FrameRateLimitBackground=240.000000
+
+      [CareerHighLight]
+      HighLightVideoSavedPath=C:\Users\clint\Videos\MarvelRivals\Highlights
+
+</code></pre>
+
+
+      <p>
+
+    </section>
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2025 Clinton Baldwin</p>
+      <nav aria-label="Footer">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="portfolio.html" class="footer-link">Portfolio</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+
+</html>
