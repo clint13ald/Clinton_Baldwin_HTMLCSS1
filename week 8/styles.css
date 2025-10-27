@@ -1,0 +1,79 @@
+
+/* Global reset and box-sizing */
+
+
+
+*, *::before, *::after  {
+    box-sizing: border-box;}
+
+
+/* Basic body and container styles */
+
+body {
+
+
+
+    font-family: 'Arial', sans-serif;
+
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+
+
+
+/* Container styles */
+
+.container 
+
+        { display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;}
+
+
+/* Product card styles */
+.product-card 
+   
+   { width: 350px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px 10px;
+
+         border-radius: 8px; /* Rounded corners */
+    transition: all 0.3s ease;}
+
+
+/* Hover effect for product card */
+.product-card:hover 
+    {box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+
+    border-color: #333;
+
+    padding: 30px;}
+
+
+/* Styling for heading and paragraph */
+
+.product-card h2 
+    {font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;}
+
+
+.product-card p 
+   { font-size: 16px;
+    color: #555;
+    line-height: 1.5;}
+
+
+/* Optional: Adding a subtle background color to the card on hover */
+.product-card:hover 
+   
+    {background-color: #fafafa;}
